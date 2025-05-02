@@ -173,6 +173,15 @@ html {
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
+@media (max-width: 576px) {
+    .d-flex.align-items-center {
+        flex-direction: column;
+        text-align: center;
+    }
+    .d-flex.align-items-center img {
+        margin-bottom: 10px;
+    }
+}
 
 
 /*** Section Title ***/
@@ -226,6 +235,12 @@ html {
 .service-item:hover * {
     color: var(--light) !important;
 }
+
+/* When active (clicked) */
+.nav-link.active i {
+    color: white !important;
+}
+
 
 
 /*** Food Menu ***/
@@ -479,4 +494,17 @@ html {
 }
 .custom-margin {
     margin-bottom: 30px; /* Adjust the value as needed */
+}
+
+.btn-social i {
+    color: white; /* initial color */
+    transition: color 0.3s ease;
+}
+
+.btn-social:hover i {
+    color: yellow; /* color on hover */
+}
+.btn-social {
+    background-color: transparent !important;
+    border-color: white !important;
 }
